@@ -1,0 +1,129 @@
+:root {
+    --color-primario: #6883AC;
+    --color-secundario: #ACB1A5;
+    --color-fondo: #F5F6FA;
+    --color-texto: ##1C1B1B;
+    --radio-borde: 8px;
+    --sombra-caja: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cuadricula-ejercicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 3rem; 
+    padding-bottom: 2rem;
+}
+
+.tarjeta-ejercicio {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    max-height: 700px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-ejercicio:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-ejercicio h3 {
+    color: var(--color-primario);
+    height: 3em; 
+    line-height: 1.5; 
+    overflow: hidden; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-ejercicio p {
+    color: #666;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.tarjeta-ejercicio > h3:nth-of-type(2) {
+    margin-top: 2rem; 
+}
+
+.tarjeta-ejercicio p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.contenedor-boton {
+    margin-top: auto; 
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-secundario);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radio-borde);
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #6883AC;
+}
+
+.boton-volver {
+    display: inline-block;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 0 1rem;
+    }
+
+    .cuadricula-ejercicios {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-ejercicio {
+        max-width: 100%;
+    }
+}
