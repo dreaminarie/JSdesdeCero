@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja de Comentarios</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicio: Caja de Comentarios (Simple Comment Box) en JavaScript</h1>
+    </header>
+
+    <main class="contenedor">
+        <div class="cuadricula-ejercicios">
+            <div class="tarjeta-ejercicio">
+                <h3>Descripción</h3>
+                <p>Este ejercicio crea una caja de comentarios donde los usuarios 
+                    puedan escribir y agregar comentarios que se muestran en la página
+                </p>
+                <h3>Instrucciones</h3>
+                <p>Interactúa con la caja de comentarios de la derecha, enviando o eliminando tus aportaciones.</p>
+                <div class="boton-volver">
+                    <a href="../../index.html" class="boton">Volver</a>
+                </div>
+            </div>
+            
+            <div class="tarjeta-ejercicio">
+                <h3>Caja de Comentarios</h3>
+                
+                <div class="formulario-comentarios">
+                    <textarea id="texto-comentario" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button id="agregar-comentario">Agregar Comentario</button>
+                </div>
+                
+                <div class="contenedor-comentarios" id="contenedor-comentarios">
+                    <p class="sin-comentarios" id="sin-comentarios">No hay comentarios todavía.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./caja-comentarios.js"></script>
+
+</body>
+</html>
+
+
