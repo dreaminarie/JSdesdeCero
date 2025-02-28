@@ -205,6 +205,182 @@ button:hover {
     font-style: italic;
 }
 
+.contenedor-generador {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    padding: 2rem;
+}
+
+.pantalla-contraseña {
+    background-color: var(--color-fondo);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contraseña {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-texto);
+    word-break: break-all;
+}
+
+.placeholder {
+    color: #888;
+    font-style: italic;
+    word-break: normal;
+}
+
+.copiar-btn {
+    background: none;
+    border: none;
+    color: var(--color-primario);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.copiar-btn:hover {
+    color: var(--color-secundario);
+    background: none;
+}
+
+.opciones {
+    margin-bottom: 1.5rem;
+}
+
+.longitud-contraseña {
+    margin-bottom: 1.5rem;
+}
+
+.longitud-contraseña label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.longitud-valor {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    accent-color: var(--color-primario);
+}
+
+.opcion-checkbox {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.opcion-checkbox input {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-primario);
+}
+
+.fortaleza-indicador {
+    background-color: var(--color-fondo);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nivel-fortaleza {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.barra-fortaleza {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.barra {
+    width: 10px;
+    height: 25px;
+    border: 2px solid var(--color-primario);
+}
+
+.debil .barra:nth-child(1) {
+    background-color: #f44336;
+    border-color: #f44336;
+}
+
+.normal .barra:nth-child(1),
+.normal .barra:nth-child(2) {
+    background-color: #ff9800;
+    border-color: #ff9800;
+}
+
+.fuerte .barra:nth-child(1),
+.fuerte .barra:nth-child(2),
+.fuerte .barra:nth-child(3) {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+.super-fuerte .barra {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.generar-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.generar-btn:hover {
+    background-color: #5673A6;
+}
+
+.icono-flecha {
+    font-size: 1.2rem;
+}
+
+#mensaje-copiado {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primario);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#mensaje-copiado.visible {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .contenedor {
         padding: 0 1rem;
@@ -221,5 +397,62 @@ button:hover {
     .seccion-comentarios {
         padding: 1rem;
         margin: 1rem;
+    }
+
+    .contenedor-generador {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    
+    .pantalla-contraseña {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contraseña {
+        font-size: 1.2rem;
+    }
+    
+    .longitud-valor {
+        font-size: 1.2rem;
+    }
+    
+    .opciones {
+        margin-bottom: 1rem;
+    }
+    
+    .fortaleza-indicador {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nivel-fortaleza {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+    
+    .barra {
+        width: 8px;
+        height: 20px;
+    }
+    
+    .opcion-checkbox input {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .generar-btn {
+        padding: 0.8rem;
+    }
+    
+    #mensaje-copiado {
+        width: 80%;
+        text-align: center;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
     }
 }
