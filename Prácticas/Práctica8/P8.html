@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Comentarios</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicio: App de Comentarios en JavaScript</h1>
+    </header>
+
+    <main class="contenedor">
+        <div class="cuadricula-ejercicios">
+            <div class="tarjeta-ejercicio">
+                <h3>Descripción</h3>
+                <p>Esta herramienta te permite crear una caja de comentarios donde los usuarios
+                    pueden escribir y agregar comentarios que se muestran en la página
+                </p>
+                <h3>Instrucciones</h3>
+                <p>Escribe el comentario que quieras en la parte derecha y envíalo, también puedes borrarlo.</p>
+                <div class="boton-volver">
+                    <a href="../../index.html" class="boton">Volver</a>
+                </div>
+            </div>
+        
+            <div class="contenedor">
+                <header>
+                    <h1>Comentarios</h1>
+                    <p>Comparte tus ideas y opiniones con otros usuarios</p>
+                </header>
+                
+                <div class="formulario-comentario">
+                    <textarea id="entrada-comentario" placeholder="Escribe tu comentario aquí..."></textarea>
+                    <button id="agregar-comentario" class="boton">Agregar Comentario</button>
+                </div>
+                
+                <div class="contenedor-comentarios">
+                    <div id="lista-comentarios" class="lista-comentarios">
+                        <div class="sin-comentarios" id="sin-comentarios">
+                            No hay comentarios aún. ¡Sé el primero en comentar!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./app-comentarios.js"></script>
+
+</body>
+</html>
